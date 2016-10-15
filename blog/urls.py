@@ -1,4 +1,5 @@
 from django.conf.urls import url
+from django.views.generic.base import TemplateView
 from . import views
 
 urlpatterns = [
@@ -7,4 +8,6 @@ urlpatterns = [
 	url(r'^post/new/$', views.post_new, name='post_new'),
 	url(r'^post/(?P<pk>[0-9]+)/edit/$', views.post_edit, name='post_edit'),
 	url(r'^post/(?P<pk>[0-9]+)/delete/$', views.post_delete, name='post_delete'),
+	url(r'^about/$', views.about, name='about'),
+	url(r'^contact/$', views.contact, name='contact'),
 ]

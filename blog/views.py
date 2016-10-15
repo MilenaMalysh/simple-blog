@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.utils import timezone
 from .models import Post
 from django.shortcuts import render, get_object_or_404
@@ -49,7 +49,12 @@ def post_delete(request, pk):
 	return redirect('post_list')
 	
 
-
+def about(request):
+	return render_to_response('blog/about.html')
+	
+	
+def contact(request):
+	return render_to_response('blog/contact.html')
 	
 
 	
