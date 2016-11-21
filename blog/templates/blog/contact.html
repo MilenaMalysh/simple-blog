@@ -1,8 +1,18 @@
 {% extends 'blog/base.html' %}
 
     {% block content %}
-        
-		
+    
+
+
+        <div class="feedback-input ">
+                <form role="form" action="" method="post">
+                    {% csrf_token %}
+                        <input name="contact_name" type="text" class="feedback-input" placeholder="Name" />
+                        <input name="contact_email" type="text" class="feedback-input" placeholder="Email" />
+                        <textarea name="content" class="feedback-input" placeholder="Comment"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+        </div>
 		
 		
     {% endblock %}
